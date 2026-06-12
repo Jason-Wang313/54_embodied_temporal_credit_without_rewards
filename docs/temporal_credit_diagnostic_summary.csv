@@ -1,0 +1,10 @@
+scenario,scenario_label,method,method_label,n,localization_error,counterfactual_precision,success_lift,reward_dependence
+visible_effect,Visible effect traces,delayed_reward_td,Delayed reward TD,240,3.4866629166666674,0.37878250000000036,0.04256291666666666,1.0
+visible_effect,Visible effect traces,dense_shaping,Dense shaping proxy,240,2.0718133333333326,0.5215141666666664,0.14598750000000005,0.5499999999999985
+visible_effect,Visible effect traces,effect_trace,Effect trace credit,240,0.7333608333333329,0.9057529166666662,0.3242304166666665,0.0
+sparse_effect,Sparse effect traces,delayed_reward_td,Delayed reward TD,240,3.5477437500000026,0.3478199999999998,0.03684999999999999,1.0
+sparse_effect,Sparse effect traces,dense_shaping,Dense shaping proxy,240,2.258646666666668,0.4607633333333335,0.13119416666666656,0.5499999999999985
+sparse_effect,Sparse effect traces,effect_trace,Effect trace credit,240,0.9331704166666663,0.8471808333333332,0.29945666666666654,0.0
+deceptive_proxy,Deceptive proxy shaping,delayed_reward_td,Delayed reward TD,240,3.616123333333332,0.34225458333333336,0.024489583333333335,1.0
+deceptive_proxy,Deceptive proxy shaping,dense_shaping,Dense shaping proxy,240,2.6964741666666674,0.3389187500000001,0.09780374999999998,0.5499999999999985
+deceptive_proxy,Deceptive proxy shaping,effect_trace,Effect trace credit,240,0.9206150000000002,0.8498766666666663,0.3031220833333333,0.0
