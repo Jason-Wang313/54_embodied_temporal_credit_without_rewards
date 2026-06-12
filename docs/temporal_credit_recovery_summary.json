@@ -1,0 +1,33 @@
+{
+  "recovered_at": "2026-06-12T02:17:12.367723+00:00",
+  "related_rows": 17754,
+  "diagnostic_rows": 2160,
+  "method_summary": [
+    {
+      "method": "delayed_reward_td",
+      "method_label": "Delayed reward TD",
+      "localization_error": 3.550176666666667,
+      "counterfactual_precision": 0.3562856944444445,
+      "success_lift": 0.03463416666666666,
+      "reward_dependence": 1.0
+    },
+    {
+      "method": "dense_shaping",
+      "method_label": "Dense shaping proxy",
+      "localization_error": 2.342311388888889,
+      "counterfactual_precision": 0.44039875,
+      "success_lift": 0.12499513888888886,
+      "reward_dependence": 0.5499999999999985
+    },
+    {
+      "method": "effect_trace",
+      "method_label": "Effect trace credit",
+      "localization_error": 0.8623820833333332,
+      "counterfactual_precision": 0.867603472222222,
+      "success_lift": 0.30893638888888875,
+      "reward_dependence": 0.0
+    }
+  ],
+  "figure_written": true,
+  "note": "Recovery reused the large attempt-two literature matrix and generated a deterministic reward-free temporal credit diagnostic."
+}
