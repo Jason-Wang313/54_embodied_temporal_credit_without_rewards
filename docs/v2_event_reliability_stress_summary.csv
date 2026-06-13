@@ -1,0 +1,13 @@
+scenario,method,method_label,n,localization_error,counterfactual_precision,success_lift,reward_dependence,best_by_error,effect_trace_wins
+reliable_events,delayed_reward_td,Delayed reward TD,480,3.5837587499999994,0.30617791666666666,0.018188541666666676,1.0,effect_trace,True
+reliable_events,dense_shaping,Dense shaping proxy,480,2.3489935416666654,0.43650750000000005,0.12446187500000011,0.5500000000000048,effect_trace,True
+reliable_events,effect_trace,Effect trace credit,480,1.0142437500000008,0.9054800000000004,0.31648999999999994,0.0,effect_trace,True
+missed_events,delayed_reward_td,Delayed reward TD,480,3.6399395833333323,0.3005883333333332,0.015891041666666675,1.0,effect_trace,True
+missed_events,dense_shaping,Dense shaping proxy,480,2.4046939583333344,0.4208664583333331,0.120469375,0.5500000000000048,effect_trace,True
+missed_events,effect_trace,Effect trace credit,480,2.243403333333334,0.6888229166666665,0.24831541666666665,0.0,effect_trace,True
+misbound_events,delayed_reward_td,Delayed reward TD,480,3.704089583333335,0.3002297916666664,0.012398124999999998,1.0,dense_shaping,False
+misbound_events,dense_shaping,Dense shaping proxy,480,2.438152291666666,0.42355666666666686,0.11897437500000002,0.5500000000000048,dense_shaping,False
+misbound_events,effect_trace,Effect trace credit,480,2.6791814583333307,0.4767079166666666,0.20181770833333337,0.0,dense_shaping,False
+adversarial_events,delayed_reward_td,Delayed reward TD,480,3.5942541666666648,0.30268812499999975,0.017784375000000005,1.0,dense_shaping,False
+adversarial_events,dense_shaping,Dense shaping proxy,480,2.3751627083333324,0.41908291666666636,0.12018458333333334,0.5500000000000048,dense_shaping,False
+adversarial_events,effect_trace,Effect trace credit,480,4.221733958333335,0.1291595833333333,0.10700687500000008,0.0,dense_shaping,False

@@ -1,0 +1,184 @@
+{
+  "decision": "workshop-only",
+  "reason": "Effect-trace credit is useful only when event traces have adequate coverage and binding accuracy.",
+  "scenario_parameters": [
+    {
+      "scenario": "reliable_events",
+      "trace_quality": 0.86,
+      "proxy_conflict": 0.35,
+      "event_coverage": 0.95,
+      "false_event_rate": 0.02,
+      "misbinding_rate": 0.02
+    },
+    {
+      "scenario": "missed_events",
+      "trace_quality": 0.72,
+      "proxy_conflict": 0.35,
+      "event_coverage": 0.45,
+      "false_event_rate": 0.06,
+      "misbinding_rate": 0.08
+    },
+    {
+      "scenario": "misbound_events",
+      "trace_quality": 0.74,
+      "proxy_conflict": 0.35,
+      "event_coverage": 0.75,
+      "false_event_rate": 0.15,
+      "misbinding_rate": 0.45
+    },
+    {
+      "scenario": "adversarial_events",
+      "trace_quality": 0.62,
+      "proxy_conflict": 0.35,
+      "event_coverage": 0.35,
+      "false_event_rate": 0.35,
+      "misbinding_rate": 0.6
+    }
+  ],
+  "summary": [
+    {
+      "scenario": "reliable_events",
+      "method": "delayed_reward_td",
+      "method_label": "Delayed reward TD",
+      "n": 480,
+      "localization_error": 3.5837587499999994,
+      "counterfactual_precision": 0.30617791666666666,
+      "success_lift": 0.018188541666666676,
+      "reward_dependence": 1.0,
+      "best_by_error": "effect_trace",
+      "effect_trace_wins": true
+    },
+    {
+      "scenario": "reliable_events",
+      "method": "dense_shaping",
+      "method_label": "Dense shaping proxy",
+      "n": 480,
+      "localization_error": 2.3489935416666654,
+      "counterfactual_precision": 0.43650750000000005,
+      "success_lift": 0.12446187500000011,
+      "reward_dependence": 0.5500000000000048,
+      "best_by_error": "effect_trace",
+      "effect_trace_wins": true
+    },
+    {
+      "scenario": "reliable_events",
+      "method": "effect_trace",
+      "method_label": "Effect trace credit",
+      "n": 480,
+      "localization_error": 1.0142437500000008,
+      "counterfactual_precision": 0.9054800000000004,
+      "success_lift": 0.31648999999999994,
+      "reward_dependence": 0.0,
+      "best_by_error": "effect_trace",
+      "effect_trace_wins": true
+    },
+    {
+      "scenario": "missed_events",
+      "method": "delayed_reward_td",
+      "method_label": "Delayed reward TD",
+      "n": 480,
+      "localization_error": 3.6399395833333323,
+      "counterfactual_precision": 0.3005883333333332,
+      "success_lift": 0.015891041666666675,
+      "reward_dependence": 1.0,
+      "best_by_error": "effect_trace",
+      "effect_trace_wins": true
+    },
+    {
+      "scenario": "missed_events",
+      "method": "dense_shaping",
+      "method_label": "Dense shaping proxy",
+      "n": 480,
+      "localization_error": 2.4046939583333344,
+      "counterfactual_precision": 0.4208664583333331,
+      "success_lift": 0.120469375,
+      "reward_dependence": 0.5500000000000048,
+      "best_by_error": "effect_trace",
+      "effect_trace_wins": true
+    },
+    {
+      "scenario": "missed_events",
+      "method": "effect_trace",
+      "method_label": "Effect trace credit",
+      "n": 480,
+      "localization_error": 2.243403333333334,
+      "counterfactual_precision": 0.6888229166666665,
+      "success_lift": 0.24831541666666665,
+      "reward_dependence": 0.0,
+      "best_by_error": "effect_trace",
+      "effect_trace_wins": true
+    },
+    {
+      "scenario": "misbound_events",
+      "method": "delayed_reward_td",
+      "method_label": "Delayed reward TD",
+      "n": 480,
+      "localization_error": 3.704089583333335,
+      "counterfactual_precision": 0.3002297916666664,
+      "success_lift": 0.012398124999999998,
+      "reward_dependence": 1.0,
+      "best_by_error": "dense_shaping",
+      "effect_trace_wins": false
+    },
+    {
+      "scenario": "misbound_events",
+      "method": "dense_shaping",
+      "method_label": "Dense shaping proxy",
+      "n": 480,
+      "localization_error": 2.438152291666666,
+      "counterfactual_precision": 0.42355666666666686,
+      "success_lift": 0.11897437500000002,
+      "reward_dependence": 0.5500000000000048,
+      "best_by_error": "dense_shaping",
+      "effect_trace_wins": false
+    },
+    {
+      "scenario": "misbound_events",
+      "method": "effect_trace",
+      "method_label": "Effect trace credit",
+      "n": 480,
+      "localization_error": 2.6791814583333307,
+      "counterfactual_precision": 0.4767079166666666,
+      "success_lift": 0.20181770833333337,
+      "reward_dependence": 0.0,
+      "best_by_error": "dense_shaping",
+      "effect_trace_wins": false
+    },
+    {
+      "scenario": "adversarial_events",
+      "method": "delayed_reward_td",
+      "method_label": "Delayed reward TD",
+      "n": 480,
+      "localization_error": 3.5942541666666648,
+      "counterfactual_precision": 0.30268812499999975,
+      "success_lift": 0.017784375000000005,
+      "reward_dependence": 1.0,
+      "best_by_error": "dense_shaping",
+      "effect_trace_wins": false
+    },
+    {
+      "scenario": "adversarial_events",
+      "method": "dense_shaping",
+      "method_label": "Dense shaping proxy",
+      "n": 480,
+      "localization_error": 2.3751627083333324,
+      "counterfactual_precision": 0.41908291666666636,
+      "success_lift": 0.12018458333333334,
+      "reward_dependence": 0.5500000000000048,
+      "best_by_error": "dense_shaping",
+      "effect_trace_wins": false
+    },
+    {
+      "scenario": "adversarial_events",
+      "method": "effect_trace",
+      "method_label": "Effect trace credit",
+      "n": 480,
+      "localization_error": 4.221733958333335,
+      "counterfactual_precision": 0.1291595833333333,
+      "success_lift": 0.10700687500000008,
+      "reward_dependence": 0.0,
+      "best_by_error": "dense_shaping",
+      "effect_trace_wins": false
+    }
+  ]
+}

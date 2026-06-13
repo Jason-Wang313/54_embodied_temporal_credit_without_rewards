@@ -18,3 +18,5 @@ results/*cache*.jsonl
 *.tmp
 /paper/main_template.tex
 /paper/*.synctex.gz
+paper/main.pdf
+data/build_status.json

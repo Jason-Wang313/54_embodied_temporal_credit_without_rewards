@@ -2,13 +2,26 @@
 
 Paper 54 in the robotics 60-paper batch.
 
-This recovery preserves the attempt-two literature sweep and adds a deterministic diagnostic for reward-free temporal credit assignment. The central thesis is that physical effect traces, such as contact changes and object-state transitions, can assign temporal credit before any scalar reward is available.
+Decision: workshop-only.
 
-Key artifacts:
+The thesis is that physical effect traces can carry temporal credit before scalar rewards are available. The v1 diagnostic supports the mechanism under usable traces: effect-trace credit reduces mean temporal localization error from 3.550 for delayed-reward TD and 2.342 for dense shaping to 0.862.
 
-- `docs/related_work_matrix.csv`: 17,754 candidate literature records from the failed runner attempt.
-- `docs/temporal_credit_diagnostic.csv`: 2,160 deterministic diagnostic rows.
-- `docs/temporal_credit_diagnostic_summary.csv`: aggregate metrics by scenario and method.
-- `paper/main.tex` and `paper/main.pdf`: recovered ICLR-style manuscript.
+V2 hardening adds an event-reliability stress:
 
-Aggregate result: effect-trace credit reduces mean temporal localization error from 3.550 steps for delayed-reward TD to 0.862 steps while using zero scalar reward dependence.
+- Reliable events: effect-trace error 1.014 versus dense shaping 2.349.
+- Missed events: effect-trace error 2.243 versus dense shaping 2.405.
+- Misbound events: effect-trace error 2.679 versus dense shaping 2.438.
+- Adversarial events: effect-trace error 4.222 versus dense shaping 2.375.
+
+The supported claim is therefore conditional: reward-free effect traces are useful only when event coverage and action-event binding are audited.
+
+## Reproduction
+
+```powershell
+python scripts/v2_event_reliability_stress.py
+powershell -ExecutionPolicy Bypass -File scripts/build_pdf.ps1
+```
+
+The canonical built PDF is `C:/Users/wangz/Downloads/54.pdf`.
+
+Local generated PDFs are not tracked. The build script copies the generated PDF to the canonical Downloads path and removes `paper/main.pdf`.

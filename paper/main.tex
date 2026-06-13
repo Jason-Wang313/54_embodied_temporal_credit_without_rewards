@@ -17,12 +17,13 @@
 \newcommand{\etc}{\textsc{TraceCredit}}
 \newcommand{\states}{\mathbf{s}}
 \newcommand{\actions}{\mathbf{a}}
+\raggedbottom
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Temporal credit assignment in robot learning is usually routed through scalar rewards, hand-shaped progress terms, or delayed task labels. This paper argues that embodied systems contain another signal: physical effect traces. Contact onset, object displacement, constraint release, force discontinuities, and scene-change events can identify which earlier action changed the world even when no reward is available. We support the claim with a 17,754-entry literature sweep and a deterministic diagnostic with 2,160 method evaluations. In the diagnostic, \etc{} reduces mean temporal localization error from 3.550 steps for delayed-reward temporal difference credit and 2.342 steps for dense proxy shaping to 0.862 steps, with counterfactual precision 0.868. The contribution is a mechanism claim: robots can assign temporal credit from embodied effect evidence before any scalar reward is observed.
+Temporal credit assignment in robot learning is usually routed through scalar rewards, hand-shaped progress terms, or delayed task labels. This paper argues that embodied systems contain another signal: physical effect traces. Contact onset, object displacement, constraint release, force discontinuities, and scene-change events can identify which earlier action changed the world even when no reward is available. We support the claim with a 17,754-entry literature sweep and a deterministic diagnostic with 2,160 method evaluations. In the diagnostic, \etc{} reduces mean temporal localization error from 3.550 steps for delayed-reward temporal difference credit and 2.342 steps for dense proxy shaping to 0.862 steps. V2 hardening narrows the claim: trace credit wins under reliable events and missed events, with errors 1.014 and 2.243, but loses to dense shaping when event bindings are wrong, with trace error 2.679 under misbinding and 4.222 under adversarial events. The contribution is a workshop-level mechanism claim: embodied traces can carry reward-free credit only when event coverage and binding are audited.
 \end{abstract}
 
 \section{Introduction}
@@ -35,6 +36,9 @@ Embodied temporal credit can be assigned from effect traces, even when scalar re
 \end{quote}
 
 The claim does not replace reinforcement learning. Instead, it changes the interface between robot perception and learning. A robot should record an action-indexed trace of physical effects and use that trace to localize causal responsibility across time before using a reward, demonstration label, or task success bit.
+
+\paragraph{Submission-hardening note.}
+Submission-hardening version: v2. Decision: workshop-only. The original diagnostic assumes usable event traces. The v2 stress test shows that the mechanism must be reported with event coverage, false-event rate, and action-event binding accuracy; otherwise dense shaping can be safer than trace credit.
 
 \section{Related Work and Novelty Boundary}
 
@@ -54,7 +58,7 @@ This shifts temporal credit from value propagation to evidence alignment. If act
 
 \section{Diagnostic Experiment}
 
-We generated a deterministic diagnostic stored in \texttt{docs/temporal\_credit\_diagnostic.csv}. Each episode samples a causal delay, trace quality, and proxy-conflict level under three scenarios: visible effects, sparse effects, and deceptive shaping proxies. Three credit rules are evaluated: delayed-reward temporal difference credit, dense shaping proxy credit, and reward-free effect-trace credit. The diagnostic is not a robot benchmark; it is a mechanism test for when an embodied event signal can beat scalar or proxy supervision.
+We generated a deterministic diagnostic with 2,160 method evaluations. Each episode samples a causal delay, trace quality, and proxy-conflict level under three scenarios: visible effects, sparse effects, and deceptive shaping proxies. Three credit rules are evaluated: delayed-reward temporal difference credit, dense shaping proxy credit, and reward-free effect-trace credit. The diagnostic is not a robot benchmark; it is a mechanism test for when an embodied event signal can beat scalar or proxy supervision.
 
 \begin{table}[t]
 \centering
@@ -71,6 +75,14 @@ Effect trace credit & 0.862 & 0.868 & 0.309 & 0.00 \\
 \end{tabular}
 \end{table}
 
+\begin{table}[t]
+\centering
+\small
+\input{v2_event_reliability_table.tex}
+\caption{V2 event-reliability stress. Effect traces remain useful with reliable or partially missed events, but fail when events are misbound to the wrong actions or become adversarial.}
+\label{tab:v2-events}
+\end{table}
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.83\linewidth]{figures/temporal_credit_summary.png}
@@ -79,7 +91,7 @@ Effect trace credit & 0.862 & 0.868 & 0.309 & 0.00 \\
 \end{figure}
 
 
-\etc{} has the lowest error and the highest counterfactual precision in this diagnostic because it observes the same kind of event that generated the delayed outcome. Dense shaping helps when the proxy aligns with the effect, but it is brittle under deceptive proxies. Delayed reward is useful only after the final label arrives and therefore smears responsibility across the horizon.
+\etc{} has the lowest error and the highest counterfactual precision in this diagnostic because it observes the same kind of event that generated the delayed outcome. Dense shaping helps when the proxy aligns with the effect, but it is brittle under deceptive proxies. Delayed reward is useful only after the final label arrives and therefore smears responsibility across the horizon. Table~\ref{tab:v2-events} is the hostile follow-up: trace credit still wins with reliable events (1.014 error) and missed events (2.243 error), but dense shaping wins once events are misbound or adversarial. The result is not that traces are universally better than rewards; it is that trace quality is an exposed assumption that must be measured.
 
 \section{Implications}
 
@@ -89,7 +101,7 @@ The mechanism also gives an evaluation protocol. A method claiming reward-free t
 
 \section{Limitations}
 
-The diagnostic is synthetic and should be read as a controlled mechanism test, not as a deployment result. Real robots need imperfect event detectors, asynchronous sensors, ambiguous contacts, and actions that produce multiple delayed effects. A follow-up should run the same protocol on manipulation logs with tactile, force, visual, and proprioceptive event channels.
+The diagnostic is synthetic and should be read as a controlled mechanism test, not as a deployment result. Real robots need imperfect event detectors, asynchronous sensors, ambiguous contacts, and actions that produce multiple delayed effects. The v2 stress shows a concrete failure mode: misbound or adversarial event traces can make reward-free credit worse than dense shaping. A follow-up should run the same protocol on manipulation logs with tactile, force, visual, and proprioceptive event channels, and it should report event coverage, false-event rate, binding accuracy, and trace-ablation failures.
 
 \section{Conclusion}
 

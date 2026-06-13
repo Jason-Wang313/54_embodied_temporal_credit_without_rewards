@@ -1,0 +1,16 @@
+{
+  "paper": 54,
+  "decision": "workshop-only",
+  "canonical_pdf": "C:/Users/wangz/Downloads/54.pdf",
+  "key_result": "Effect traces win under reliable or missed events, but lose under misbound and adversarial event traces.",
+  "v2_metrics": {
+    "reliable_effect_trace_error": 1.0142437500000008,
+    "reliable_dense_error": 2.3489935416666654,
+    "missed_effect_trace_error": 2.243403333333334,
+    "missed_dense_error": 2.4046939583333344,
+    "misbound_effect_trace_error": 2.6791814583333307,
+    "misbound_dense_error": 2.438152291666666,
+    "adversarial_effect_trace_error": 4.221733958333335,
+    "adversarial_dense_error": 2.3751627083333324
+  }
+}
