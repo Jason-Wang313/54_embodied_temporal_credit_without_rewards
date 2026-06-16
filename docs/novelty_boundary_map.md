@@ -2,16 +2,24 @@
 
 ## Not Novel
 
-- Reward-free exploration.
+- Temporal-difference learning.
+- Dense reward shaping.
 - Hindsight relabeling.
-- Dense shaping.
-- Temporal-difference credit propagation.
-- Generic predictive world-model losses.
+- Inverse dynamics.
+- Self-supervised robot world models.
+- Generic event detection.
 
-## Plausible Contribution
+## Historical Collapse
 
-Use embodied effect events as the credit carrier and evaluate temporal localization against those events.
+The original raw effect-trace claim was too broad. V2 showed raw traces lose to dense shaping when events are misbound or adversarial.
 
-## V2 Boundary
+## Final Novelty Boundary
 
-The contribution survives only if event traces are auditable. Misbound or adversarial traces make the method worse than dense shaping.
+The final contribution is an event-audited benchmark and protocol for embodied temporal credit without scalar rewards. The paper claims that trace credit is useful when event coverage, false-event rate, and action-event binding are audited and used to gate or fall back.
+
+## Not Claimed
+
+- Real robot log validation.
+- Hardware deployment safety.
+- Universal superiority over dense shaping.
+- Reward-free learning without event labels.

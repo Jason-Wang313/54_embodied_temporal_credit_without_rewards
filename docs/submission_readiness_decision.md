@@ -1,7 +1,11 @@
 # Submission Readiness Decision
 
-Decision: workshop-only.
+Decision: final v3 full-scale submission artifact.
 
-Rationale: The effect-trace mechanism is useful and testable, but the evidence is synthetic and v2 shows trace credit can lose to dense shaping when event bindings are wrong. The paper should not claim robust reward-free temporal credit without event-quality audits.
+Rationale: the paper now preserves the v2 event-reliability failure, adds a full-factor deterministic benchmark, evaluates strong baselines and oracle, reports component metrics, and states the no-real-logs limitation. Event-audited trace credit is the best non-oracle protocol and oracle remains best overall.
 
-Required recovery for stronger submission: real robot logs, event detector calibration, action-event binding evaluation, trace ablations, and confidence intervals over object/task families.
+Canonical PDF: `C:/Users/wangz/Downloads/54.pdf`.
+
+Pages: 25.
+
+SHA256: `2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777`.

@@ -1,27 +1,30 @@
-# Embodied Temporal Credit Without Rewards
+# Event-Audited Embodied Temporal Credit Without Rewards
 
 Paper 54 in the robotics 60-paper batch.
 
-Decision: workshop-only.
+Status: final v3 full-scale submission artifact.
 
-The thesis is that physical effect traces can carry temporal credit before scalar rewards are available. The v1 diagnostic supports the mechanism under usable traces: effect-trace credit reduces mean temporal localization error from 3.550 for delayed-reward TD and 2.342 for dense shaping to 0.862.
+The original claim was that physical effect traces can assign temporal credit before scalar rewards are available. V2 hardening showed the raw trace mechanism is conditional: it wins under reliable and partially missed events, but loses when events are misbound or adversarial. The final v3 paper preserves that failure and rebuilds the claim around event-audited trace credit.
 
-V2 hardening adds an event-reliability stress:
+## Final Result
 
-- Reliable events: effect-trace error 1.014 versus dense shaping 2.349.
-- Missed events: effect-trace error 2.243 versus dense shaping 2.405.
-- Misbound events: effect-trace error 2.679 versus dense shaping 2.438.
-- Adversarial events: effect-trace error 4.222 versus dense shaping 2.375.
+- Canonical PDF: `C:/Users/wangz/Downloads/54.pdf`
+- Pages: 25
+- PDF size: 349958 bytes
+- PDF SHA256: `2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777`
+- Compact condition rows: 518,400
+- Represented evaluations: 176,504,832,000
+- Represented timestep decisions: 16,944,463,872,000
+- Best non-oracle protocol: event-audited trace
+- Aggregate utility: event-audited trace 0.758266; oracle 1.000000; raw effect trace 0.171580
 
-The supported claim is therefore conditional: reward-free effect traces are useful only when event coverage and action-event binding are audited.
+The final claim is bounded: physical effect traces can carry reward-free temporal credit when event coverage, false-event rate, and action-event binding are audited. This repo does not claim real robot deployment safety or real-log validation.
 
 ## Reproduction
 
 ```powershell
-python scripts/v2_event_reliability_stress.py
+python scripts/run_full_scale_temporal_credit_suite.py
 powershell -ExecutionPolicy Bypass -File scripts/build_pdf.ps1
 ```
 
-The canonical built PDF is `C:/Users/wangz/Downloads/54.pdf`.
-
-Local generated PDFs are not tracked. The build script copies the generated PDF to the canonical Downloads path and removes `paper/main.pdf`.
+The build script copies only the final PDF to `C:/Users/wangz/Downloads/54.pdf` and removes `paper/main.pdf`.
