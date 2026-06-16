@@ -1,0 +1,22 @@
+{
+  "paper": 54,
+  "status": "final_v3_full_scale",
+  "canonical_pdf": "C:/Users/wangz/Downloads/54.pdf",
+  "pdf_pages": 25,
+  "pdf_size_bytes": 349958,
+  "pdf_sha256": "2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777",
+  "condition_rows": 518400,
+  "represented_evaluations": 176504832000,
+  "represented_timestep_decisions": 16944463872000,
+  "best_non_oracle_protocol": "event_audited_trace",
+  "oracle_utility": 1.0,
+  "event_audited_trace_utility": 0.758266,
+  "raw_effect_trace_utility": 0.17158,
+  "latex_log_clean": true,
+  "visual_qa_pages": [1, 4, 7, 13, 20, 25],
+  "limitations": {
+    "real_robot_logs": false,
+    "hardware_deployment_claim": false,
+    "deterministic_benchmark": true
+  }
+}

@@ -1,7 +1,7 @@
 # Novelty Decision
 
-Decision after v2 hardening: workshop-only.
+Decision after v3 full-scale hardening: final submission artifact.
 
-Reason: The effect-trace credit carrier is a useful mechanism framing, but the evidence is synthetic and conditional on event-trace reliability. V2 stress shows dense shaping can beat trace credit when event bindings are wrong.
+Reason: the paper no longer claims raw trace credit is sufficient. It preserves the v2 reliability failure and introduces an event-audited full-scale benchmark where the proposed protocol is best non-oracle while oracle remains best overall.
 
-Novelty boundary: the paper is not a new general reward-free learning algorithm. It is a workshop-level argument for logging and auditing embodied effect traces as temporal-credit targets.
+Novelty boundary: claim a deterministic benchmark and conditional event-audited temporal-credit result. Do not claim real robot deployment, real-log validation, or universal superiority over dense shaping when event binding is bad.

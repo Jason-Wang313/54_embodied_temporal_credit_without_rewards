@@ -1,5 +1,13 @@
 # Hostile Reviewer Response
 
-The strongest criticism is correct: the original diagnostic assumes usable effect events. V2 hardening shows that when events are bound to the wrong action, dense shaping can outperform trace credit.
+The strongest reviewer objection to the old paper was correct: raw effect traces fail when events are misbound or adversarial, and dense shaping can be safer in those regimes.
 
-The revised paper therefore makes a conditional mechanism claim. Reward-free effect traces are useful only when event coverage and action-event binding are measured. This is workshop-only evidence, not a deployment claim.
+The final v3 paper answers that objection by:
+
+- preserving the v2 event-reliability failure as a negative control,
+- adding event coverage, false-event rate, binding accuracy, fallback, abstention, and miscredit metrics,
+- evaluating 8 protocols across 518,400 compact rows,
+- showing that event-audited trace credit is best non-oracle while oracle remains best,
+- stating that real robot logs remain future work.
+
+The final claim is narrower and stronger: physical traces can carry reward-free temporal credit only when event quality is audited.

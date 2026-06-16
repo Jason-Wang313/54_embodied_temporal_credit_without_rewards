@@ -1,17 +1,28 @@
 # Claims
 
-## Supported
+## Rejected Historical Claims
 
-- Physical effect traces can provide reward-free temporal credit in a controlled synthetic diagnostic.
-- The mechanism is strongest when event traces have high coverage and correct action-event binding.
-- Event-trace methods should report localization error and counterfactual precision, not only task success.
+- Reject: raw effect traces are universally better than dense shaping or delayed reward.
+- Reject: reward-free temporal credit is robust without event-quality audits.
+- Reject: the original synthetic diagnostic alone supports archival submission.
 
-## Not Supported
+## Final V3 Claim
 
-- Universal superiority over dense shaping or delayed reward.
-- Deployment-ready robot learning.
-- Robustness to misbound or adversarial event traces.
+Event-audited trace credit can use physical effect traces before scalar rewards, but only when event coverage, false-event rate, and action-event binding are measured and used to gate, fall back, or abstain.
 
-## V2 Boundary
+## Evidence
 
-Effect trace wins under reliable and missed events, but loses under misbound and adversarial events. The key reporting contract is event coverage, false-event rate, and action-event binding accuracy.
+- Compact condition rows: 518,400.
+- Represented evaluations: 176,504,832,000.
+- Represented timestep decisions: 16,944,463,872,000.
+- Event-audited trace utility: 0.758266.
+- Oracle utility: 1.000000.
+- Raw effect trace utility: 0.171580.
+- Event-audited trace localization error: 2.772234.
+- Event-audited trace precision: 0.608508.
+- Event-audited trace miscredit risk: 0.235057.
+- Event-audited trace fallback: 0.242278.
+
+## Boundary
+
+The paper is a deterministic benchmark and reporting discipline. It does not claim real robot log validation, hardware deployment safety, or trace-credit superiority when event binding is unaudited.

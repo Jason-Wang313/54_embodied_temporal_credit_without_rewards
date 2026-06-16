@@ -1,16 +1,28 @@
 {
   "paper": 54,
-  "decision": "workshop-only",
+  "decision": "final_v3_full_scale",
   "canonical_pdf": "C:/Users/wangz/Downloads/54.pdf",
-  "key_result": "Effect traces win under reliable or missed events, but lose under misbound and adversarial event traces.",
-  "v2_metrics": {
-    "reliable_effect_trace_error": 1.0142437500000008,
-    "reliable_dense_error": 2.3489935416666654,
-    "missed_effect_trace_error": 2.243403333333334,
-    "missed_dense_error": 2.4046939583333344,
-    "misbound_effect_trace_error": 2.6791814583333307,
-    "misbound_dense_error": 2.438152291666666,
-    "adversarial_effect_trace_error": 4.221733958333335,
-    "adversarial_dense_error": 2.3751627083333324
-  }
+  "pages": 25,
+  "pdf_size_bytes": 349958,
+  "sha256": "2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777",
+  "condition_rows": 518400,
+  "represented_evaluations": 176504832000,
+  "represented_timestep_decisions": 16944463872000,
+  "key_result": "Event-audited trace credit is the best non-oracle protocol in the deterministic full-scale benchmark; oracle remains best overall.",
+  "protocol_utilities": {
+    "delayed_reward_td": -0.017179,
+    "dense_shaping": 0.172034,
+    "hindsight_relabel": 0.032553,
+    "inverse_dynamics": 0.358972,
+    "raw_effect_trace": 0.171580,
+    "coverage_weighted_trace": 0.416677,
+    "event_audited_trace": 0.758266,
+    "oracle": 1.0
+  },
+  "visual_qa_pages": [1, 4, 7, 13, 20, 25],
+  "limitations": [
+    "deterministic benchmark",
+    "no real robot logs",
+    "no hardware deployment safety claim"
+  ]
 }

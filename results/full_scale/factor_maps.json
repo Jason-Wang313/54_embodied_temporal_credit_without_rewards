@@ -1,0 +1,64 @@
+{
+  "task": {
+    "t00": "block push delayed displacement",
+    "t01": "door latch release",
+    "t02": "drawer opening",
+    "t03": "peg insertion delayed seating",
+    "t04": "cable routing",
+    "t05": "cloth unfolding",
+    "t06": "tool use delayed motion",
+    "t07": "bimanual handoff",
+    "t08": "stacking support creation",
+    "t09": "button delayed mechanism",
+    "t10": "pouring delayed flow onset",
+    "t11": "recovery after failed contact"
+  },
+  "event": {
+    "e00": "visual object displacement",
+    "e01": "contact onset or loss",
+    "e02": "force impulse",
+    "e03": "constraint release",
+    "e04": "support graph edit",
+    "e05": "multimodal fused event"
+  },
+  "horizon": {
+    "h00": "1-2 step immediate",
+    "h01": "3-5 step short delay",
+    "h02": "6-10 step medium delay",
+    "h03": "11-16 step long delay",
+    "h04": "variable multi-event horizon",
+    "h05": "delayed decoy before true event"
+  },
+  "reliability": {
+    "r00": "reliable events",
+    "r01": "partially missed events",
+    "r02": "high false-event rate",
+    "r03": "action-event misbinding",
+    "r04": "adversarial event injection",
+    "r05": "low-coverage high-precision"
+  },
+  "proxy": {
+    "p00": "no reward available",
+    "p01": "delayed sparse reward",
+    "p02": "aligned dense shaping",
+    "p03": "deceptive dense shaping",
+    "p04": "conflicting human success label"
+  },
+  "sensor": {
+    "s00": "synchronized multimodal logs",
+    "s01": "delayed tactile stream",
+    "s02": "partial observability",
+    "s03": "actuator-latency confound",
+    "s04": "cross-object distractor motion"
+  },
+  "protocol": {
+    "delayed_reward_td": "Delayed reward TD",
+    "dense_shaping": "Dense shaping proxy",
+    "hindsight_relabel": "Hindsight relabel credit",
+    "inverse_dynamics": "Inverse-dynamics credit",
+    "raw_effect_trace": "Raw effect trace",
+    "coverage_weighted_trace": "Coverage-weighted trace",
+    "event_audited_trace": "Event-audited trace",
+    "oracle": "Oracle causal event credit"
+  }
+}

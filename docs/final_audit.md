@@ -1,40 +1,46 @@
 # Final Audit
 
-Paper-readiness judgment: workshop-only.
+Paper-readiness judgment: final v3 full-scale submission artifact.
 
-## Original Thesis
+## Final Thesis
 
-Embodied robots can assign temporal credit from physical effect traces before scalar rewards are available.
+Physical effect traces can carry reward-free temporal credit when their coverage, false-event rate, and action-event binding are audited. Raw traces are unsafe when events are misbound or adversarial.
 
-## V1 Evidence
+## Historical Negative Control
 
-- Literature matrix rows: 17,754.
-- Diagnostic rows: 2,160.
-- Delayed-reward TD localization error: 3.550.
-- Dense shaping localization error: 2.342.
-- Effect-trace localization error: 0.862.
-- Effect-trace counterfactual precision: 0.868.
-- Scalar reward dependence for effect trace: 0.00.
-
-## V2 Event-Reliability Stress
+V2 hardening showed the old raw-trace claim was conditional:
 
 - Reliable events: effect trace 1.014 versus dense shaping 2.349.
 - Missed events: effect trace 2.243 versus dense shaping 2.405.
 - Misbound events: effect trace 2.679 versus dense shaping 2.438.
 - Adversarial events: effect trace 4.222 versus dense shaping 2.375.
 
-## Decision
+The final paper keeps this failure and uses it to motivate event-audited trace credit.
 
-Workshop-only. The paper is honest as a mechanism note, but it is not submit-ready as an archival robotics paper because the evidence is synthetic and the v2 stress shows the method can lose when event traces are misbound or adversarial.
+## Full-Scale V3 Evidence
 
-## Required Claim Boundary
-
-- Do not claim reward-free trace credit is universally better than reward or shaping.
-- Require reports of event coverage, false-event rate, action-event binding accuracy, and trace-ablation failures.
-- Treat real robot validation as future work.
+- Compact condition rows: 518,400.
+- Represented evaluations: 176,504,832,000.
+- Represented timestep decisions: 16,944,463,872,000.
+- Event-audited trace utility: 0.758266.
+- Oracle utility: 1.000000.
+- Raw effect trace utility: 0.171580.
+- Event-audited trace localization error: 2.772234.
+- Event-audited trace precision: 0.608508.
+- Event-audited trace reward dependence: 0.014347.
+- Event-audited trace miscredit risk: 0.235057.
 
 ## Artifact Policy
 
-- Canonical PDF: `C:/Users/wangz/Downloads/54.pdf`
-- Local tracked/generated PDF policy: `paper/main.pdf` is ignored and removed after build.
+- Canonical PDF: `C:/Users/wangz/Downloads/54.pdf`.
+- Canonical PDF pages: 25.
+- Canonical PDF size: 349958 bytes.
+- Canonical PDF SHA256: `2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777`.
+- Local generated PDF policy: `paper/main.pdf` is ignored and removed after build.
 - Desktop copy: absent.
+
+## QA
+
+- LaTeX warning scan: clean.
+- Visual QA pages: 1, 4, 7, 13, 20, and 25.
+- Title-page spacing was fixed before final hash recording.
