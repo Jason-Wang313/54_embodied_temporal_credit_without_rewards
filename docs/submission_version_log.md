@@ -18,4 +18,5 @@
 - Evaluated 8 protocols across task, event, horizon, reliability, proxy/reward, and sensor/binding factors.
 - Rewrote the manuscript as "Event-Audited Embodied Temporal Credit Without Rewards".
 - Built the final 25-page canonical PDF at `C:/Users/wangz/Downloads/54.pdf`.
-- Final SHA256: `2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777`.
+- Final SHA256: `CFBE8C618E572DFCEE35C2FE129CBD51EF507D9C174B0D876BCD82284AB28122`.
+- VLA-style highlight hardening verified 10 red link boxes on pages 4, 5, and 6.

@@ -11,7 +11,8 @@ The original claim was that physical effect traces can assign temporal credit be
 - Canonical PDF: `C:/Users/wangz/Downloads/54.pdf`
 - Pages: 25
 - PDF size: 349958 bytes
-- PDF SHA256: `2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777`
+- PDF SHA256: `CFBE8C618E572DFCEE35C2FE129CBD51EF507D9C174B0D876BCD82284AB28122`
+- VLA-style highlight hardening: 10 red link boxes on pages 4, 5, and 6, all with border `(0, 0, 1)`.
 - Compact condition rows: 518,400
 - Represented evaluations: 176,504,832,000
 - Represented timestep decisions: 16,944,463,872,000

@@ -4,7 +4,7 @@
   "canonical_pdf": "C:/Users/wangz/Downloads/54.pdf",
   "pages": 25,
   "pdf_size_bytes": 349958,
-  "sha256": "2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777",
+  "sha256": "CFBE8C618E572DFCEE35C2FE129CBD51EF507D9C174B0D876BCD82284AB28122",
   "condition_rows": 518400,
   "represented_evaluations": 176504832000,
   "represented_timestep_decisions": 16944463872000,
@@ -20,6 +20,12 @@
     "oracle": 1.0
   },
   "visual_qa_pages": [1, 4, 7, 13, 20, 25],
+  "vla_highlight_hardening": {
+    "link_pages": [4, 5, 6],
+    "red_link_boxes": 10,
+    "border": [0, 0, 1],
+    "visual_qa_pages": [4, 5, 6]
+  },
   "limitations": [
     "deterministic benchmark",
     "no real robot logs",
