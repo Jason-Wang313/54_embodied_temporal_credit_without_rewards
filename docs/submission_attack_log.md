@@ -22,4 +22,4 @@ Final result: passed. Event-audited trace utility is 0.758266; coverage-weighted
 
 ## Attack: page-count and artifact readiness
 
-Final result: passed. Canonical PDF has 25 pages and SHA256 `2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777`.
+Final result: passed. Canonical PDF has 25 pages and SHA256 `CFBE8C618E572DFCEE35C2FE129CBD51EF507D9C174B0D876BCD82284AB28122`. VLA-style highlight hardening verified 10 red link boxes on pages 4, 5, and 6.

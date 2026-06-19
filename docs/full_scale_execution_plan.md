@@ -187,7 +187,8 @@ The final manuscript must be at least 25 pages and the length must come from con
 - Canonical PDF: `C:/Users/wangz/Downloads/54.pdf`.
 - Pages: 25.
 - PDF size: 349958 bytes.
-- SHA256: `2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777`.
+- SHA256: `CFBE8C618E572DFCEE35C2FE129CBD51EF507D9C174B0D876BCD82284AB28122`.
+- VLA-style highlight hardening: 10 red link boxes on pages 4, 5, and 6, all with border `(0, 0, 1)`.
 - Compact condition rows: 518400.
 - Represented evaluations: 176504832000.
 - Represented timestep decisions: 16944463872000.

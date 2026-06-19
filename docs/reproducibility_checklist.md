@@ -11,6 +11,7 @@
 - Validation JSON: `results/full_scale/validation.json`.
 - Canonical PDF: `C:/Users/wangz/Downloads/54.pdf`.
 - PDF pages: 25.
-- PDF SHA256: `2111E596A34169B09585C7875294D0BA1B581D62D47F440207B06F04FF311777`.
+- PDF SHA256: `CFBE8C618E572DFCEE35C2FE129CBD51EF507D9C174B0D876BCD82284AB28122`.
+- VLA-style highlight hardening: 10 red link boxes on pages 4, 5, and 6, all with border `(0, 0, 1)`.
 - Local generated PDF policy: `paper/main.pdf` is ignored and removed after build.
 - Desktop PDF copy: absent.
